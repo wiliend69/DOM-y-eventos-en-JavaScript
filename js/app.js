@@ -1,4 +1,4 @@
-const { cloneElement } = require("react");
+
 
 const formulario = document.getElementById('saludo');
 const input = document.getElementById('nombre');
@@ -33,11 +33,21 @@ botonReiniciar.addEventListener('click', () =>{
     numero.style.color = '';
 })
 
-
 const txt = document.getElementById('texto');
 const copia = document.getElementById('vista');
 
-txt.addEventListener('input', (evento) =>{
-    
-    copia.textContent = evento.target.value;
+txt.addEventListener('input', (evento) => {
+  copia.textContent = evento.target.value;
+});
+
+
+const colorbg = document.getElementById('color');
+const card = document.getElementById('miCard');
+
+colorbg.addEventListener('change',(evento) => {
+
+    card.style.backgroundColor = evento.target.value;
+
 })
+
+
