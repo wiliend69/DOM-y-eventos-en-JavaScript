@@ -50,4 +50,21 @@ colorbg.addEventListener('change',(evento) => {
 
 })
 
+const tarea = document.getElementById('input-tarea')
+const respuesta = document.getElementById('resultado')
+
+tarea.addEventListener('keydown',function(evento) {
+
+    if(evento.key === 'Enter'){
+        const texto = tarea.value.trim();
+
+        if (texto !==''){
+
+            respuesta.textContent = `Nueva tarea: ${texto}`;
+
+            tarea.value ='';
+        }
+    }
+})
+
 
